@@ -1,0 +1,149 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9raTEwQG9raS5jb20iLCJ1c2VyTmFtZSI6Im9raTEwIiwiaWF0IjoxNTE2Nzg1MTI4LCJleHAiOjE1MTczODk5MjgsInN1YiI6IjVhNjAyOTY2ZTg3ZWIzM2RhOGU0YWVmZiJ9.lSgmBHw9UHp9CDMgcLwbOWBbgBmQpu3HwdZI9xBI1Sg
+
+### Sign in
+POST https://tanto-api.now.sh/auth
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "12345"
+}
+### Sign in
+POST http://localhost:7000/auth
+Content-Type: application/json
+
+{
+  "email": "oki10@oki.com",
+  "password": "123123"
+}
+
+### Get Products
+GET https://tanto-api.now.sh/products
+Authorization: Bearer {{ token }}
+
+### Get Sales
+GET https://tanto-api.now.sh/sales
+Authorization: Bearer {{ token }}
+
+### Register
+POST http://localhost:7000/auth/register
+Content-Type: application/json
+
+{
+  "email": "test@test.com",
+  "useName": "demouser",
+  "password": "12345"
+}
+
+### Create product
+POST https://tanto-api.now.sh/products
+Authorization: Bearer {{ token }}
+Content-Type: application/json
+
+{
+  "category": "Damascus",
+  "code": "454"
+}
+
+### Create Sale
+POST http://localhost:7000/sales
+Authorization: Bearer {{ token }}
+Content-Type: application/json
+
+{
+  "products": [{"product": "5a5a922155d7671ab84f1408", "salePrice": "99", "unitAmount": "1"}],
+  "customer": "5a5560d7e51e644448cd7814",
+  "date": "2017-11-01"
+}
+
+### Delete product
+DELETE http://localhost:7000/sale/5a5eb473e4b0351c94c5fea8
+Authorization: Bearer {{ token }}
+Content-Type: application/json
+
+### Update product
+PUT http://localhost:7000/product/5a6848a31eec813a98b53109
+Authorization: Bearer {{ token }}
+Content-Type: application/json
+
+{
+  "image": "https://res.cloudinary.com/dbbim9cy0/image/upload/v1516784808/qiatt9c9ldzuolzw05tl.jpg"
+}
+
+### Delete product
+DELETE http://localhost:7000/product/5a6848a31eec813a98b53104
+Authorization: Bearer {{ token }}
+Content-Type: application/json
+
+### Read customer
+GET http://localhost:7000/customers
+# Authorization: Bearer {{ token }}
+
+### Add new customer
+POST http://localhost:7000/customers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoeW1lbmcyNEBnbWFpbC5jb20iLCJpYXQiOjE1MTYwNjcxMjUsImV4cCI6MTUxNjY3MTkyNSwic3ViIjoiNWE1MmY3OWMyZmMzNTA4YzZlZTBiZjEzIn0.T3_lw1Ku7DKc1HtUZp-kpOgd_BlroXXUDV0CVNHMCLc
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "phone": "0421201101",
+  "gender": "male",
+  "isChef": false,
+  "workAt": "Kmart",
+  "origin": "SNS (Facebook, Twitter etc)",
+  "note": "Long text Long text Long text Long text Long text Long text Long text Long text "
+}
+
+### Update customer
+PUT http://localhost:7000/customer/5a5560d7e51e644448cd7814
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoeW1lbmcyNEBnbWFpbC5jb20iLCJpYXQiOjE1MTYwNjcxMjUsImV4cCI6MTUxNjY3MTkyNSwic3ViIjoiNWE1MmY3OWMyZmMzNTA4YzZlZTBiZjEzIn0.T3_lw1Ku7DKc1HtUZp-kpOgd_BlroXXUDV0CVNHMCLc
+Content-Type: application/json
+
+{
+   # "firstName": "Emma",
+   # "lastName": "Watson",
+   "gender": "female",
+   # "purchasedHistory": [],
+   "isChef": true,
+   # "workAt": "Maccas",
+   # "origin": "SNS (Facebook, Twitter etc)",
+   "note": "Long text Long text Long text Long text Long text Long text Long text Long text "   
+}
+
+### Delete customer
+DELETE http://localhost:7000/customer/5a5d5bb0bfb92d3f77e60c3c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoeW1lbmcyNEBnbWFpbC5jb20iLCJpYXQiOjE1MTYwNjcxMjUsImV4cCI6MTUxNjY3MTkyNSwic3ViIjoiNWE1MmY3OWMyZmMzNTA4YzZlZTBiZjEzIn0.T3_lw1Ku7DKc1HtUZp-kpOgd_BlroXXUDV0CVNHMCLc
+Content-Type: application/json
+
+### Create sale
+POST http://localhost:7000/sales
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoeW1lbmcyNEBnbWFpbC5jb20iLCJpYXQiOjE1MTU5OTUzMTYsImV4cCI6MTUxNjYwMDExNiwic3ViIjoiNWE1MmY3OWMyZmMzNTA4YzZlZTBiZjEzIn0.50e44cexRalx1F7Qm-4nCB5X-93Px3AY9sF8cb-N_LM
+Content-Type: application/json
+
+{"products":[{"product":"5a5bf31f5fdac41a583aedf3","salePrice":"150","unitAmount":"1"}, {"product":"","salePrice":"","unitAmount":""}],"customer":"5a5d5c9cbfb92d3f77e60c3d","date":"2018-01-15","totalPrice":"150"}
+
+
+### Delete product
+DELETE http://localhost:7000/sale/5a5ddbe1bfb92d3f77e60c4b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNoeW1lbmcyNEBnbWFpbC5jb20iLCJpYXQiOjE1MTU5OTUzMTYsImV4cCI6MTUxNjYwMDExNiwic3ViIjoiNWE1MmY3OWMyZmMzNTA4YzZlZTBiZjEzIn0.50e44cexRalx1F7Qm-4nCB5X-93Px3AY9sF8cb-N_LM
+Content-Type: application/json
+
+### Edit Sale
+PUT http://localhost:7000/sale/5a65f03515b3c830b86fb0d8
+Authorization: Bearer {{ token }}
+Content-Type: application/json
+
+{  "customer": "5a61322d773bab1d041a80d9",
+    "date": "2018-12-25",
+    "type": "store",
+    "totalPrice": 1980
+}
+
+### 
+ "products": [{"product": "5a636eddd0cee30d18b48b74", "salePrice": "111", "unitAmount": "1"},
+   {"product": "5a636eefd0cee30d18b48b75", "salePrice": "666", "unitAmount": "2"},
+   {"product": "5a636f02d0cee30d18b48b76", "salePrice": "333", "unitAmount": "3"},
+   {"product": "5a636f31d0cee30d18b48b77", "salePrice": "444", "unitAmount": "4"},
+   {"product": "5a636f4cd0cee30d18b48b78", "salePrice": "555", "unitAmount": "5"}
+    ],

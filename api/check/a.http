@@ -1,4 +1,4 @@
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9raTEwQG9raS5jb20iLCJ1c2VyTmFtZSI6Im9raTEwIiwiaWF0IjoxNTE2Nzg1MTI4LCJleHAiOjE1MTczODk5MjgsInN1YiI6IjVhNjAyOTY2ZTg3ZWIzM2RhOGU0YWVmZiJ9.lSgmBHw9UHp9CDMgcLwbOWBbgBmQpu3HwdZI9xBI1Sg
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9raTEwQG9raS5jb20iLCJ1c2VyTmFtZSI6Im9raTEwIiwiaWF0IjoxNTE4MjY5NzY5LCJleHAiOjE1MTg4NzQ1NjksInN1YiI6IjVhNjAyOTY2ZTg3ZWIzM2RhOGU0YWVmZiJ9.G7r_OYRId77Mu03V9mHCHSyF0NYYUGAoeKJEHkttvoY
 
 ### Sign in
 POST https://tanto-api.now.sh/auth
@@ -147,3 +147,12 @@ Content-Type: application/json
    {"product": "5a636f31d0cee30d18b48b77", "salePrice": "444", "unitAmount": "4"},
    {"product": "5a636f4cd0cee30d18b48b78", "salePrice": "555", "unitAmount": "5"}
     ],
+
+### Edit Sale
+PUT http://localhost:7000/notifications/5a5c1126c73b7728e8d8c1d1
+Authorization: Bearer {{ token }}
+Content-Type: application/json
+
+{  
+   "checked": true
+}

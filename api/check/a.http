@@ -149,10 +149,6 @@ Content-Type: application/json
     ],
 
 ### Edit Sale
-PUT http://localhost:7000/notifications/5a5c1126c73b7728e8d8c1d1
+DELETE http://localhost:7000/notification/5a5c1126c73b7728e8d8c1d1
 Authorization: Bearer {{ token }}
 Content-Type: application/json
-
-{  
-   "checked": true
-}

@@ -1,5 +1,5 @@
-@base_url = https://yarra-api-lzhprstysc.now.sh
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9raTNAb2tpLmNvbSIsImlhdCI6MTUxMzIxMjE1NCwiZXhwIjoxNTEzODE2OTU0LCJzdWIiOiI1YTMxYzhkNmJkMDJjZTAwYTFlMjI2M2UifQ.jLLwawSK33HvPn_yhHKMCGOQFisr-xjOHYvlo2adfok
+@base_url = https://mct-project-t3-demo.now.sh
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJ1c2VyTmFtZSI6InRlc3R1c2VyIiwiaWF0IjoxNTE4MjY4NzA0LCJleHAiOjE1MTg4NzM1MDQsInN1YiI6IjVhN2VmMTFmODQ4MWMwMDBhYmIxZjIxYSJ9.NAIq53RP9IOk3RwpNzsNYGtIuMHe9l5LBeprjUK8ITk
 
 ### List products
 GET {{base_url}}/products
@@ -20,10 +20,9 @@ POST {{base_url}}/auth/register
 Content-Type: application/json
 
 {
-  "email": "oki3@oki.com",
-  "firstName": "tomomi",
-  "lastName": "oki",
-  "password": "123123"
+  "email": "test@test.com",
+  "userName": "testuser",
+  "password": "12345"
 }
 
 
@@ -32,6 +31,6 @@ POST  {{base_url}}/auth
 Content-Type: application/json
 
 {
-  "email": "oki3@oki.com",
-  "password": "123123"
+  "email": "test@test.com",
+  "password": "12345"
 }

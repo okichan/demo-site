@@ -45,6 +45,7 @@ function SignInForm({ onSignIn }) {
                   <button type="submit" className="btn btn-primary mb-2">Sign In</button>
                </div>
             </form>
+         <h3 className="text-center mt-4 alert-danger">PRODUCT DEMO VERSION</h3>
          </div>
       </div>
    );
